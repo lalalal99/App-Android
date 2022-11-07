@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MixedMinds</string>
+    <string name="navigationBar_home">Home</string>
+    <string name="navigationBar_prenotazioni">Prenotazioni</string>
+    <string name="navigationBar_orari_e_tariffe">Orari e Tariffe</string>
+    <string name="navigationBar_affluenza">Affluenza</string>
+    <string name="navigationBar_profilo">Profilo</string>
+
+    <string name="textProfilo">Funzione non implementata</string>
+
+    <string name="buttonPrenota">Nuova Prenotazione</string>
+    <string name="textPrenotazioniEffettuate">Prenotazioni Effettuate</string>
+
+
+</resources>
