@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/txtHomeContatti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Orari e Tariffe Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true" />
+        android:text="Contatti"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/txtHomeContatti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/keyboard_arrow_up_black_24x24" />
+
+    <TextView
+        android:id="@+id/txtTariffe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Tariffe:"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <TextView
+        android:id="@+id/txtPersoneTariffe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Adulto\nBambini tra i 6 e i 18 anni\nUnder 6 e over 65\n\nPer le visite guidate ci sarà un extra di 1€ a persona"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTariffe" />
+
+    <TextView
+        android:id="@+id/txtPrezziTariffe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u20ac 6,00\n\u20ac 3,00\nGratuito"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPersoneTariffe"
+        app:layout_constraintTop_toTopOf="@+id/txtPersoneTariffe" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtTariffe"
+        app:layout_constraintTop_toBottomOf="@+id/txtTariffe" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="378dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrariAperturaP" />
+
+    <TextView
+        android:id="@+id/txtGiornoAffluenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Martedi"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@+id/txtGiornoAffluenza"
+        app:layout_constraintTop_toTopOf="@+id/txtGiornoAffluenza"
+        app:srcCompat="@drawable/arrow_drop_left_black_24x24" />
+
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/txtGiornoAffluenza"
+        app:layout_constraintTop_toTopOf="@+id/txtGiornoAffluenza"
+        app:srcCompat="@drawable/arrow_drop_right_black_24x24" />
+
+    <TextView
+        android:id="@+id/txtOrariAperturaM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="10:00-13:00"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGiornoAffluenza" />
+
+    <TextView
+        android:id="@+id/txtOrariAperturaP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="15:00-18:00"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrariAperturaM" />
+
+    <Button
+        android:id="@+id/btnPrenotaOrari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Prenotati"
+        app:layout_constraintEnd_toEndOf="@+id/chart"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

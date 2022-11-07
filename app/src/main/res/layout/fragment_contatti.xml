@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtContatti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtContatti"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtContatti"
+        app:layout_constraintTop_toBottomOf="@+id/txtContatti" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/txtEmail"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtContatti"
+        app:layout_constraintTop_toBottomOf="@+id/txtContatti" />
+
+    <TextView
+        android:id="@+id/txtNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtTelefono"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtTwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtTwitter"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNumero"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumero" />
+
+    <TextView
+        android:id="@+id/txtFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtFacebook"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/txtTwitter" />
+
+    <TextView
+        android:id="@+id/txtNumTel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:text="@string/linkTel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNumero" />
+
+    <TextView
+        android:id="@+id/txtIndEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linkEmail"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumTel"
+        app:layout_constraintTop_toTopOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtAccountTwitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linkTwitter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTwitter"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumTel"
+        app:layout_constraintTop_toTopOf="@+id/txtTwitter" />
+
+    <TextView
+        android:id="@+id/txtAccountFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linkFacebook"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/txtAccountTwitter"
+        app:layout_constraintTop_toTopOf="@+id/txtFacebook" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/keyboard_arrow_down_black_24x24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

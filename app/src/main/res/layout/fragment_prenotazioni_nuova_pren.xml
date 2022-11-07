@@ -1,15 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
-    <Button
-        android:id="@+id/button"
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtVisitaA"
+        app:layout_constraintTop_toBottomOf="@+id/txtOra" />
+
+    <TextView
+        android:id="@+id/numGratuiti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="245dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/NumGratuiti"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_min_gratuiti"
+        app:layout_constraintStart_toEndOf="@+id/btn_min_gratuiti"
+        app:layout_constraintTop_toTopOf="@+id/btn_min_gratuiti" />
+
+    <ImageView
+        android:id="@+id/btn_min_gratuiti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/TODO"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGratuito"
+        app:layout_constraintEnd_toEndOf="@+id/btn_min_ridotto"
+        app:layout_constraintTop_toTopOf="@+id/txtGratuito"
+        app:srcCompat="@drawable/btn_minus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/btn_plus_Gratuito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:contentDescription="@string/TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/numGratuiti"
+        app:layout_constraintStart_toEndOf="@+id/numGratuiti"
+        app:layout_constraintTop_toTopOf="@+id/numGratuiti"
+        app:srcCompat="@drawable/btn_plus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/btn_plus_ridotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:contentDescription="@string/TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/numRidotti"
+        app:layout_constraintStart_toEndOf="@+id/numRidotti"
+        app:layout_constraintTop_toTopOf="@+id/numRidotti"
+        app:srcCompat="@drawable/btn_plus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/btn_min_ridotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/TODO"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRidotto"
+        app:layout_constraintEnd_toEndOf="@+id/btn_min_adulto"
+        app:layout_constraintTop_toTopOf="@+id/txtRidotto"
+        app:srcCompat="@drawable/btn_minus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/numRidotti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/NumRidotti"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_min_ridotto"
+        app:layout_constraintStart_toEndOf="@+id/btn_min_ridotto"
+        app:layout_constraintTop_toTopOf="@+id/btn_min_ridotto" />
+
+    <TextView
+        android:id="@+id/txtVisitaA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtVisitaA"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/ckbPalazzo"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/ckbPalazzo"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtVisitaA"
+        app:layout_constraintTop_toBottomOf="@+id/txtVisitaA" />
+
+    <CheckBox
+        android:id="@+id/ckbPalazzoGuidata"
+        android:layout_width="166dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/ckbPalazzoGuidata"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/ckbPalazzo"
+        app:layout_constraintTop_toBottomOf="@+id/ckbPalazzo" />
+
+    <CheckBox
+        android:id="@+id/ckbParco"
+        android:layout_width="163dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/ckbParco"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ckbPalazzo"
+        app:layout_constraintTop_toBottomOf="@+id/ckbPalazzoGuidata" />
+
+    <CheckBox
+        android:id="@+id/ckbParcoGuidata"
+        android:layout_width="166dp"
+        android:layout_height="26dp"
+        android:text="@string/ckbParcoGuidata"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/ckbPalazzoGuidata"
+        app:layout_constraintTop_toBottomOf="@+id/ckbParco" />
+
+    <TextView
+        android:id="@+id/txtAdulto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtAdulto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtVisitaA"
+        app:layout_constraintTop_toBottomOf="@+id/ckbParcoGuidata" />
+
+    <TextView
+        android:id="@+id/txtRidotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtRidotto"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtVisitaA"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdulto" />
+
+    <TextView
+        android:id="@+id/txtGratuito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/txtGratuito"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtVisitaA"
+        app:layout_constraintTop_toBottomOf="@+id/txtRidotto" />
+
+    <ImageView
+        android:id="@+id/btn_min_adulto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/TODO"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAdulto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAdulto"
+        app:layout_constraintTop_toTopOf="@+id/txtAdulto"
+        app:srcCompat="@drawable/btn_minus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/numAdulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/NumAdulti"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_min_adulto"
+        app:layout_constraintStart_toEndOf="@+id/btn_min_adulto"
+        app:layout_constraintTop_toTopOf="@+id/btn_min_adulto" />
+
+    <ImageView
+        android:id="@+id/btn_plus_adulto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:contentDescription="@string/TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/numAdulti"
+        app:layout_constraintStart_toEndOf="@+id/numAdulti"
+        app:layout_constraintTop_toTopOf="@+id/numAdulti"
+        app:srcCompat="@drawable/btn_plus"
+        android:onClick="onClick"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtGiorno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtGiorno"
+        app:layout_constraintStart_toStartOf="@+id/txtGratuito"
+        app:layout_constraintTop_toBottomOf="@+id/txtGratuito"
+        android:textSize="20dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtOra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtOra"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtGiorno"
+        app:layout_constraintTop_toBottomOf="@+id/txtGiorno"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/btn_calendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGiorno"
+        app:layout_constraintStart_toEndOf="@+id/txtGiorno"
+        app:layout_constraintTop_toTopOf="@+id/txtGiorno"
+        app:srcCompat="@drawable/btn_calendario" />
+
+    <ImageView
+        android:id="@+id/btn_Orario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOra"
+        app:layout_constraintEnd_toEndOf="@+id/btn_calendario"
+        app:layout_constraintTop_toTopOf="@+id/txtOra"
+        app:srcCompat="@drawable/btn_orario" />
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/txtData"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtGiorno"
+        app:layout_constraintStart_toEndOf="@+id/btn_calendario"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtOrario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtOrario"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtOra"
+        app:layout_constraintEnd_toEndOf="@+id/txtData"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtTotale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/txtTotale"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/txtTotaleEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTotaleEuro"
+        android:textSize="25dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTotale"
+        app:layout_constraintEnd_toEndOf="@+id/txtOrario" />
+
+    <Button
+        android:id="@+id/btn_continua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btn_continua"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/erroreDataOra"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Ora o data inseriti\n non corretti"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOrario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtOrario"
+        app:layout_constraintTop_toTopOf="@+id/txtData" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

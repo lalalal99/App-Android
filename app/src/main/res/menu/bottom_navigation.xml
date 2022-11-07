@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
-        android:title="@string/navigationBar_home" />
 
     <item
         android:id="@+id/nav_prenotazioni"
         android:icon="@drawable/ic_prenotazioni"
         android:title="@string/navigationBar_prenotazioni" />
-
-    <item
-        android:id="@+id/nav_orarie_e_tariffe"
-        android:icon="@drawable/ic_orari_e_tariffe"
-        android:title="@string/navigationBar_orari_e_tariffe" />
-
     <item
         android:id="@+id/nav_affluenza"
-        android:icon="@drawable/ic_affluenza"
-        android:title="@string/navigationBar_affluenza" />
-
+        android:icon="@drawable/ic_orari_e_tariffe"
+        android:title="@string/navigationBar_orari_e_tariffe" />
     <item
-        android:id="@+id/nav_profilo"
-        android:icon="@drawable/ic_profilo"
-        android:title="@string/navigationBar_profilo" />
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_gallery"
+        android:title="Galleria" />
+
+    <!--    <item-->
+<!--        android:id="@+id/nav_affluenza"-->
+<!--        android:icon="@drawable/ic_affluenza"-->
+<!--        android:title="@string/navigationBar_affluenza" />-->
 </menu>

@@ -1,4 +1,7 @@
 <resources>
+
+    <string name="TODO">TODO</string>
+
     <string name="app_name">MixedMinds</string>
     <string name="navigationBar_home">Home</string>
     <string name="navigationBar_prenotazioni">Prenotazioni</string>
@@ -6,10 +9,71 @@
     <string name="navigationBar_affluenza">Affluenza</string>
     <string name="navigationBar_profilo">Profilo</string>
 
+
     <string name="textProfilo">Funzione non implementata</string>
+
 
     <string name="buttonPrenota">Nuova Prenotazione</string>
     <string name="textPrenotazioniEffettuate">Prenotazioni Effettuate</string>
 
+    <string name="txtPrenData1">30/12/2020</string>
+    <string name="txtPrenData2">30/12/2020</string>
+    <string name="txtPrenData3">30/12/2020</string>
+    <string name="txtPrenOra1">16:10</string>
+    <string name="txtPrenOra2">16:10</string>
+    <string name="txtPrenOra3">16:10</string>
+
+    <string name="txtVisitaA">Visita a:</string>
+    <string name="ckbPalazzo">Palazzo Chigi</string>
+    <string name="ckbParco">Parco Chigi</string>
+    <string name="ckbPalazzoGuidata">Visita guidata</string>
+    <string name="ckbParcoGuidata">Visita guidata</string>
+
+    <string name="txtAdulto">Adulto</string>
+    <string name="txtRidotto">Ragazzi 6-18 anni</string>
+    <string name="txtGratuito">Over 65/Under 6</string>
+    <string name="NumAdulti">1</string>
+    <string name="NumRidotti">0</string>
+    <string name="NumGratuiti">0</string>
+
+    <string name="txtGiorno">Scegli data:</string>
+    <string name="txtData">30/12/2020</string>
+    <string name="txtOra">Scegli orario</string>
+    <string name="txtOrario">16:10</string>
+    <string name="txtTotale">Totale:</string>
+    <string name="txtTotaleEuro">6,00€</string>
+    <string name="btn_continua">CONTINUA</string>
+    <string name="erroreDataOra">Ora o data inseriti non corretti</string>
+
+
+    <string name="txtPrenConfermata">Prenotazione Confermata</string>
+    <string name="txtQrCode">Usa questo QR Code per saltare la fila alla cassa, puoi trovarlo nella sezione prenotazioni</string>
+    <string name="btnChiudi">CHIUDI</string>
+
+
+    <string name="txtModPagamento">Modalità di Pagamento</string>
+    <string name="rb_inApp">Pagamento in app</string>
+    <string name="rb_inLoco">Pagamento in loco</string>
+    <string name="btnIndietroModPag">INDIETRO</string>
+    <string name="btnContinuaModPag">CONTINUA</string>
+
+
+    <string name="txtContatti">Contatti</string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtTelefono">Numero di telefono:</string>
+    <string name="txtTwitter">Twitter:</string>
+    <string name="txtFacebook">Facebook:</string>
+    <string name="linkEmail"><a href="mailto:info@palazzochigiariccia.com">info@palazzochigiariccia.com</a></string>
+    <string name="linkTel"><a href="tel:06 933 0053">06 933 0053</a></string>
+    <string name="linkTwitter"><a href="https://twitter.com/amicipalachigi?lang=it%22%3E@amicipalachigi">@amicipalachigi</a></string>
+    <string name="linkFacebook"><a href="https://it-it.facebook.com/amicidipalazzochigi/">amicidipalazzochigi</a></string>
+
+
+    <string name="txtModGiorno">Modifica la data:</string>
+    <string name="txtModData">30/12/2020</string>
+    <string name="txtModOra">Modifica orario:</string>
+    <string name="txtModOrario">16:10</string>
+    <string name="btn_modifica">MODIFICA</string>
+    <string name="erroreDataOraMod">Ora o data inseriti non corretti</string>
 
 </resources>
